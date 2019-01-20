@@ -1,0 +1,24 @@
+\usepackage{mdframed}
+\usepackage{relsize}
+\usepackage{tikz}
+
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{svg.path}
+\usetikzlibrary{calc,fit}
+
+\definecolor{maroon}{rgb}{0.5, 0, 0}
+\definecolor{green}{rgb}{0, 0.7, 0}
+\definecolor{blue}{rgb}{0, 0, 0.7}
+
+\newmdenv[
+  skipabove=\topsep,
+  skipbelow=\topsep,
+  linewidth=1pt,
+  linecolor=maroon
+]{fullbox}
+
+\newcommand{\boxtitle}[1]{\textlarger{\textbf{\textcolor{maroon}{#1}}}}
+\newcommand{\smtt}[1]{\textsmaller{\texttt{#1}}}
+
+% I don't like captions taking the full width of the page.
+\captionsetup{width=0.78\linewidth}
