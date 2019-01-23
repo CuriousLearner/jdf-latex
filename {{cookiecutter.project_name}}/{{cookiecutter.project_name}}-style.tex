@@ -47,6 +47,7 @@
 \usepackage[natbibapa]{apacite}
 \usepackage{natbib}
 
+{% raw %}
 % Remove the comma between authors and years.
 \AtBeginDocument{%
   \renewcommand{\BBAY}{}%% punctuation between authors and year
@@ -114,7 +115,7 @@
 \makeatletter
 \renewcommand{\maketitle}{\bgroup
    \begin{center}
-   \textbf{{\fontsize{18pt}{20}\selectfont \@title}}\\
+   \textbf{{\fontsize{18pt}{20}\selectfont \@title}}
    \vspace{10pt}
    {\fontsize{12pt}{0}\selectfont \@author}
    \end{center}
@@ -133,8 +134,8 @@
 \newcommand{\subsc}[1]{$_{\text{#1}}$}
 \newcommand{\link}[2]{\href{#1}{\underline{#2}}}
 
-% Custom \author command that adds a clickable email
-\newcommand{\jdfauthor}[2]{\author{#1\\\link{mailto:#2}{#2}}}
+% Custom \authoremail command that adds a clickable email
+\newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
 
 % Sets up some nice PDF metadata
 \hypersetup{
@@ -149,3 +150,4 @@
   urlcolor=ballblue,
   linkcolor=blue
 }
+{% endraw %}

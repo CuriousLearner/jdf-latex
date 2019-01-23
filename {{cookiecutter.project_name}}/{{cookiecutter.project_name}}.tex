@@ -1,18 +1,17 @@
-\input{jdf-style}
+\input{ {{-cookiecutter.project_name-}}-style }
 
-\title{%
-  Title \\
-  Continued Title}
+\title{
+  {{-cookiecutter.project_title_line_1-}} \\
+  {{-cookiecutter.project_title_line_2-}}
+  }
 
-\jdfauthor{Author Name}{author@email.com}
+\authoremail{ {{-cookiecutter.author_name-}} }{ {{-cookiecutter.author_email-}} }
 
 \begin{document}
 \maketitle
 \thispagestyle{fancy}
 
-Hello world
-
-This was mentioned. \citep{Joyner17}.
+{{cookiecutter.project_description}}
 
 \bibliographystyle{apacite}
 \bibliography{references}
