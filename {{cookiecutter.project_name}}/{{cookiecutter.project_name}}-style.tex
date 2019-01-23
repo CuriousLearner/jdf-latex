@@ -133,10 +133,12 @@
 \newcommand{\super}[1]{$^{\text{#1}}$}
 \newcommand{\subsc}[1]{$_{\text{#1}}$}
 \newcommand{\link}[2]{\href{#1}{\underline{#2}}}
+{% endraw %}
 
-% Custom \authoremail command that adds a clickable email
-\newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
+% Custom \author command that adds a clickable email
+\newcommand{\{{-cookiecutter.author_name-}}}[2]{% raw %}{\author{#1\\\link{mailto:#2}{#2}}}{% endraw %}
 
+{% raw %}
 % Sets up some nice PDF metadata
 \hypersetup{
   pdftitle={},    % whatever your title is, or some shorter version
