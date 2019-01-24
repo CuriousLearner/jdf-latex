@@ -2,7 +2,14 @@
 
 \title{
   {{-cookiecutter.project_title_line_1-}} \\
-  {{-cookiecutter.project_title_line_2-}}
+
+  {%- if cookiecutter.project_title_line_2 -%}
+    {{-cookiecutter.project_title_line_2-}} \\
+  {%- endif -%}
+
+  {%- if cookiecutter.project_title_line_3 -%}
+    {{-cookiecutter.project_title_line_3-}} \\
+  {%- endif -%}
   }
 
 \{{-cookiecutter.author_name-}}{ {{-cookiecutter.author_name-}} }{ {{-cookiecutter.author_email-}} }

@@ -4,6 +4,7 @@
     "project_name": "my_project",
     "project_title_line_1": "My LaTex Project",
     "project_title_line_2": "",
+    "project_title_line_3": "",
     "project_description": "",
     "_copy_without_render": [
         "references.bib"
