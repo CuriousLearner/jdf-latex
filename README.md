@@ -24,7 +24,7 @@ Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then y
 
 3. Answer a few questions.
 
-4. Now, you can start writing your document. Either directly add your text in `your_project.tex` or create a new `.tex` file and include it in `your_project.tex` using:
+4. Now, you can start writing your document. Either directly add your text in `main.tex` or create a new `.tex` file and include it in `main.tex` using:
 ```
     \input{<file_name>.tex}
 ```
