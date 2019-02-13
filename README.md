@@ -47,6 +47,8 @@ __NOTE__:
 - Every time you add a new reference, you need to run these 3 commands.
 - *.aux* file is generated automatically after using `pdflatex` for the initial build.
 
-That's it!
+## Thanks to Contributors
 
 Many thanks to the creator of [cookiecutter](https://github.com/audreyr/cookiecutter).
+
+This cookiecutter template is based on George Kudrayvtsev, Shiva Saxena and other's work. We're thankful for their contributions.
