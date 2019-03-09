@@ -1,8 +1,8 @@
-# Cookiecutter for LaTex Article
+# Cookiecutter for JDF LaTex
 
-A cookiecutter template for writing LaTeX articles.
+A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF).
 
-Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample.pdf).
+Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample/sample.pdf).
 
 ## Basic Workflow
 
@@ -29,23 +29,43 @@ Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then y
     \input{<file_name>.tex}
 ```
 
-### Build PDF
+### Build the PDF
+
+#### Method 1: Use the makefile
+
+After writing your LaTex document, give command `make` from the project directory.
+
+```shell
+    make
+```
+
+And your `main.pdf` shall be good to go!
+
+__NOTE__:
+- Every time you add/remove a reference you need to re-generate the PDF with `make` command.
+
+#### Method 2: Build PDF the hard way 
 
 1. After writing your LaTex document, build it from project directory using:
-```
-    pdflatex your_project.tex
+```shell
+    pdflatex main
 ```
 
 2. In case your document contains references (citations/images/links/etc) use:
-```
-    bibtex your_project.aux
-    pdflatex your_project.tex
-    pdflatex your_project.tex
+```shell
+    bibtex main
+    python enumerate-refs.py
+    pdflatex main
+    pdflatex main
 ```
 
 __NOTE__:
-- Every time you add a new reference, you need to run these 3 commands.
-- *.aux* file is generated automatically after using `pdflatex` for the initial build.
+- Every time you add/remove a reference you need to re-generate the PDF. For which either run command `make` as described [above](#method-1-use-the-makefile), OR do as follows:
+```shell
+    rm main.bbl
+    rm main.aux
+```
+And [build the pdf](#method-2-build-pdf-the-hard-way) again.
 
 ## Thanks to Contributors
 
