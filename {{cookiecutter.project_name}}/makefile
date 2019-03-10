@@ -1,4 +1,5 @@
-jdf:
+.PHONY: all
+all:
 	$(info Generating the JDF PDF.)
 	pdflatex main
 	bibtex main

@@ -24,16 +24,14 @@ Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then y
 
 3. Answer a few questions.
 
-4. Now, you can start writing your document. Either directly add your text in `main.tex` or create a new `.tex` file and include it in `main.tex` using:
+4. Now, you can start writing your document. Either directly add your text in `main.tex` OR, create a new `.tex` file and include it in `main.tex` using:
 ```
     \input{<file_name>.tex}
 ```
 
 ### Build the PDF
 
-#### Method 1: Use the makefile
-
-After writing your LaTex document, give command `make` from the project directory.
+After writing your LaTex document, give `make` command from the project directory.
 
 ```shell
     make
@@ -42,30 +40,7 @@ After writing your LaTex document, give command `make` from the project director
 And your `main.pdf` shall be good to go!
 
 __NOTE__:
-- Every time you add/remove a reference you need to re-generate the PDF with `make` command.
-
-#### Method 2: Build PDF the hard way 
-
-1. After writing your LaTex document, build it from project directory using:
-```shell
-    pdflatex main
-```
-
-2. In case your document contains references (citations/images/links/etc) use:
-```shell
-    bibtex main
-    python enumerate-refs.py
-    pdflatex main
-    pdflatex main
-```
-
-__NOTE__:
-- Every time you add/remove a reference you need to re-generate the PDF. For which either run command `make` as described [above](#method-1-use-the-makefile), OR do as follows:
-```shell
-    rm main.bbl
-    rm main.aux
-```
-And [build the pdf](#method-2-build-pdf-the-hard-way) again.
+- Every time you make changes in `main.tex` file you need to re-generate the PDF with `make` command.
 
 ## Thanks to Contributors
 
