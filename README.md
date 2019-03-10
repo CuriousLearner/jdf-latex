@@ -1,8 +1,8 @@
-# Cookiecutter for LaTex Article
+# Cookiecutter for JDF LaTex
 
-A cookiecutter template for writing LaTeX articles.
+A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF).
 
-Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample.pdf).
+Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample/sample.pdf).
 
 ## Basic Workflow
 
@@ -24,28 +24,23 @@ Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then y
 
 3. Answer a few questions.
 
-4. Now, you can start writing your document. Either directly add your text in `main.tex` or create a new `.tex` file and include it in `main.tex` using:
+4. Now, you can start writing your document. Either directly add your text in `main.tex` OR, create a new `.tex` file and include it in `main.tex` using:
 ```
     \input{<file_name>.tex}
 ```
 
-### Build PDF
+### Build the PDF
 
-1. After writing your LaTex document, build it from project directory using:
-```
-    pdflatex your_project.tex
+After writing your LaTex document, give `make` command from the project directory.
+
+```shell
+    make
 ```
 
-2. In case your document contains references (citations/images/links/etc) use:
-```
-    bibtex your_project.aux
-    pdflatex your_project.tex
-    pdflatex your_project.tex
-```
+And your `main.pdf` shall be good to go!
 
 __NOTE__:
-- Every time you add a new reference, you need to run these 3 commands.
-- *.aux* file is generated automatically after using `pdflatex` for the initial build.
+- Every time you make changes in `main.tex` file you need to re-generate the PDF with `make` command.
 
 ## Thanks to Contributors
 
