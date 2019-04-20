@@ -138,6 +138,12 @@
 % Custom \authoremail command that adds a clickable email
 \newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
 
+% Custom command for inline code-style
+\usepackage{courier}
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
 % Sets up some nice PDF metadata
 \hypersetup{
   pdftitle={},    % whatever your title is, or some shorter version
