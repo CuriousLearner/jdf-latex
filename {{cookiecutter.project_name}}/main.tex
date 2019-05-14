@@ -24,192 +24,94 @@
 % \input{<file_name>.tex}
 
 \begin{abstract}
-If you are writing a paper that requires an abstract, it should be placed at the
-top of the first page underneath the title and author, preceded by the word
-Abstract in bold. An extra half-inch should be added to the left and right side
-of the abstract. Note that not all papers require abstracts; only those that
-would benefit from giving a high-level summary of the project or its background.
+If your paper requires an abstract, it should be placed at the top of the first page underneath the title block, preceded by the word Abstract in bold italic. An extra 0.5'' should be added to both sides. Not all papers require abstracts; only those that would benefit from a high-level summary of the project or its background.
 \end{abstract}
 
-\section*{Introduction}
-Hi! Welcome to Joyner Document Format (JDF). This document format is an attempt
-to avoid all the difficulties we encounter when requiring specific word counts.
-By standardizing the page count, we hope to incentivize efficiency with both
-words and figures. Plus, having a standard format makes every paper feel more
-professional. This format is also available as a Word document.
+\section*{1 Text}
+Welcome to Joyner Document Format (JDF) 2.0! JDF is primarily intended to standardize page lengths while ensuring readability. Note that although you are required to use JDF for all written assignments, we will not perform explicit formatting checks. You should not worry too much about whether your submission conforms to every minute detail; the most important elements are margins, font, font sizes, and approximate line spacing. Use the paragraph styles built into this document. If you do so, you do not need to verify that the style was followed.
 
-Most conferences take this approach, but we find that most conference formats
-are overkill relative to what we really need for our classes. So, we've created
-our own format inspired mostly by Lecture Notes in Computer Science. This format
-intends to be more usable than the full LNCS, which would be rather onerous to
-use several times per semester.
-
-
-\section*{Grading}
-Note that we will not be applying explicit document checks on your formatting.
-Your submission will not be automatically rejected for failure to strictly
-adhere to this format. Minor issues that no one would notice organically will
-not be held against you. More significant issues, like incorrect font sizes,
-incorrect margins, or systematic small errors may be subject to penalties.
-Alterations that appear to be specifically intended to shorten or extend a
-paper's apparent length may be subject to harsher penalties.
-
-
-\section*{Text}
-All text in JDF should be in the Crimson Text font. The Crimson Text font is
-available via Google Fonts, or this zip file.
-
-The paper title should be in 18 point bold font, centered at the top of the
-first page. The title may be up to three lines. The author's name and email
-should be next unless you want or were asked to submit anonymously, in which
-case this should be omitted. For typical assignments, the document title may be
-as simple as ``Assignment 1''. More specialized assignments may warrant more
-unique paper names, like ``A Proposal to Create a New Document Format''.
-
-Body text in JDF should be 12 points, 1.15 spacing. \textbf{Bold},
-\emph{italics}, and \underline{underline} may be used as needed. Hyperlinks may
-be inserted in the text, as well as superscripts\super{like this},
-subscripts\subsc{like this}, and footnotes.\footnote{This is a footnote. The
-footnote should be indicated in the text by a number footnote in superscript
-format, and the footnote itself should be in 10 point font at the bottom of the
-corresponding page.} Body text should be 1.15 spaced, with 6 points of line
-spacing after each paragraph. Paragraphs should not be indented.
-
-
-\subsection*{Heading 1 and Heading 2}
-Heading 1 should be bold and in 18 point font. Heading 2 should be bold and in
-14 point font. All headings at all levels should have 12pt spacing before the
-heading and 6pt spacing after the heading.
-
-\subsubsection*{Heading 3}
-Heading 3 should be bold and 12 point font. Like the other headings, it should
-be preceded by 12pt spacing and followed by 6pt spacing.
-
-\paragraph*{Heading 4}
-Use of headings beyond Heading 3 is not recommended. If need be, though, Heading
-4 should be bold, italicized, and 12 point font. Like the other headings, it
-should be preceded by 12pt spacing and followed by 6pt spacing.
-
-\subparagraph*{Heading 5}
-Use of headings beyond Heading 3 is not recommended. If need be, though, Heading
-5 should be italicized and 12 point font. Like the other headings, it should be
-preceded by 12pt spacing and followed by 6pt spacing.
-
-
-\subsection*{Margins}
-Margins should be 1.5 inches on all sides. The page number should be included in
-the top right corner of the page in the margin.
-
-
-\section*{Figures \& Tables}
-You are encouraged to use figures in your submissions. An example of a figure
-inserted into a paper is below, in \autoref{fig::1}.
+\Huge\centerline{Handgloves}\normalsize
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=3in, scale=.5]{figs/example-image}
-  \caption{The ``New Year's Eve Cat''.}
+  \includegraphics[scale=0.72]{figs/example-image1}
+  \caption{Palatino. Make sure the live text (top) uses the same font as the image (bottom).}
   \label{fig::1}
 \end{figure}
 
-Figures should always be centered on the page, although they may also take up
-the entire width of the page. They should not, however, exceed the page margins.
-Figures should always be referenced in the text. Figures may also be equations,
-diagrams, or other kinds of content.
+All text in JDF should be set in the Palatino typeface. It is available practically everywhere as a system font: Google Docs offers a version called Palatino Linotype. It comes in regular and bold weights with matching italics.
 
-\subsection*{Figure Captions}
-Figures captions should be centered underneath the corresponding figure. The
-label for the figure, e.g. ``Figure 1'', should be bolded, and the entire
-caption should be 10 point font. If need be, you may have one figure caption
-corresponding to multiple consecutive figures, and use either locational
-descriptors (e.g. ``Top Left'', ``Middle'') or labels (e.g. ``A'', ``B'') to map
-parts of the caption to parts of the figure.
+\subsection*{1.1 Body text}
+Body text is set in the regular weight at 11 points with custom line spacing of 1.26, and 8.5 points of spacing added after each paragraph. It should be justified and paragraphs should not be indented. These styles can be automatically applied using the Normal paragraph style.
+Bold and italics should be used for emphasis. Hyperlinks may be inserted in the text, as well as \texttt{in-line} code, superscripts \super{like this}, and subscripts \subsc{like this}.
 
-\subsection*{Table Captions}
-Table captions should be formatted the same way as figure captions, but they
-should be placed above the table. The popular mnemonic for this is:
-\underline{f}igures at the \underline{f}oot, \underline{t}ables at the
-\underline{t}op. Like figures, tables should not exceed the margins on the page
-and should be centered on the page. You have freedom to format the table in the
-way that works best for your data.
+\subsection*{1.2 Title \& subtitle}
+The paper title should be set in the regular weight at 17 points with 1.15 line spacing, centered at the top of the first page. The title may span up to three lines. For typical assignments, the document title may be as simple as “Assignment 1.” More specialized assignments may warrant more unique paper names, like “A Proposal to Create a New Document Format.”
+The author’s name and email should come next unless you want to or were asked to submit anonymously, in which case this can be omitted. They should be set in the same size and weight as body text, centered. These styles can be applied using the Title and Subtitle paragraph styles.
 
-Make sure that captions are on the same page as the corresponding figure or
-table. If a figure or table's size is such that it cannot fit in the text
-without leaving considerable blank space on a page or separating the caption
-from the table or figure, consider rearranging the text. For example, this
-paragraph was moved before the table below so that the table would not span two
-pages. You may also place the figure or table and its caption in a textbox with
-no outlines and use that to position the figure or table at the top or bottom of
-a page while the text rearranges around it.
+\subsection*{1.3 Headings}
+Headings should all be set in the same size as body text (11 points) in bold. With the exception of Heading 1, they should all have 8.5 points of space added before and after. They should be hierarchically numbered: Microsoft Word will do this automatically when you use the appropriate paragraph styles, but Google Docs users will need to number their headings manually.
+
+\subsubsection*{1.3.1 Heading 1}
+Heading 1 should be set in all caps. It should have 11 points of space added before and 8.5 points of space added after.
+
+\subsubsection*{1.3.2 Headings 2-4}
+Besides Heading 1, which is set in caps, headings should always use sentence case (i.e., first word capitalized) rather than title case; after all, they are not titles. Heading 2 should be set in bold roman (upright), and Heading 3 should be set in bold italics. The use of headings beyond Heading 3 is discouraged.
+
+\paragraph*{Heading 4 ---}
+Heading 4 is provided as a run-in sidehead. Like Heading 3, it is set in bold italics, but it should be followed by an em dash and flow right into the text, as seen at the beginning of the current paragraph. It should be used more as a list style than a heading style, e.g. to set off a list of principles in a heuristic evaluation.
+
+\subsection*{1.4 Page layout}
+JDF uses the US Letter paper size (8.5'' × 11''). It has a top margin of 1'', and bottom and side margins of 1.5''. This yields a text block of 5.5'' × 8.5'', which is exactly $\frac{1}{2}$ the size of the page, divided lengthwise.
+The page number should be included in the bottom margin, 1'' from the bottom of the page --- this creates symmetry with the top margin. No other elements should be placed in the margins.
+
+\section*{2 PRESENTATIONAL ELEMENTS}
+You are encouraged to use presentational elements liberally, as long as they add to the clarity of your submissions. They often require less space and fewer accompanying words to explain a given concept, and do a far better job of it.
+
+\subsection*{2.1 Figures}
+Figures should always be centered on the page, although they may also take up the entire width and height of the text block. Figures should always be referenced in the text, and they should include a descriptive caption. Figures may also be equations, diagrams, or other kinds of content.
+If your figure includes a white background (e.g. an interface design or graph), it may aid legibility to add a $\frac{1}{4}$ point black border.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{figs/example-image2}
+  \caption{Make sure your flowcharts are more useful than this one. Source: \link{https://xkcd.com/1195/}{XKCD}.}
+  \label{fig::2}
+\end{figure}
+
+Figure captions should be centered beneath the corresponding figure. The label for the figure, e.g. “Figure 1,” should be bolded, and the entire caption should be 8.5 points with 14 points of line spacing. If need be, you may have one figure caption corresponding to multiple consecutive figures and use either locational descriptors (e.g. “top left,” “middle”) or labels (e.g. “A”, “B”) to map parts of the caption to parts of the figure. Make sure that caption falls on the same page as the corresponding figure or table; you may rearrange text to make this work.
+
+\subsection*{2.2 Tables}
+You have freedom to format tables in the way that works best for your data. Generally, text should be left-aligned and numbers should be right-aligned or aligned at the decimal – you can do this using a \link{https://practicaltypography.com/tabs-and-tab-stops.html}{custom tab stop}. The default table style shown below \autoref{table:1} reduces the text size to be equal to the caption text.
+Table captions should be formatted the same way as figure captions, but they should be placed above the table. The popular mnemonic for this is: figures at the foot, tables at the top. Like figures, tables should not exceed the margins and should be centered on the page.
 
 \begin{table}[H]
   \centering
-  \caption{A chart of the number of references to various animals and children in this document.}
+  \caption{Mathematical constants. Notice how the approximations align at the decimal.}
   \label{table:1}
-  \begin{tabular}{l|c|r}
-    \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
-    $\alpha$ & $\beta$ & $\gamma$ \\
+  \footnotesize
+  \begin{tabular}{l|c|r|l}
+    \textbf{Name} & \textbf{Symbol} & \textbf{Approximation} & \textbf{Description}\\
     \hline
-    1 & 1110.1 & a\\
-    2 & 10.1 & b\\
-    3 & 23.113231 & c\\
+    Golden ratio & $\omega$ & 1.618 & Number such that the ration of 1 to the\\
+    & & & number is equal to the ration of its\\
+    & & & reciprocal to 1\\
+    \hline
+    Euler's number & $\epsilon$ & 2.71828 & Exponential growth constant\\
+    \hline
+    Archimedes' & $\pi$ & 3.14 & The ratio between circumference and\\
+    & & & diameter of a circle\\
+    \hline
+    One hundred & A\super{+} & 100 & The grade we hope you'll all earn in this\\
+    & & & this class
   \end{tabular}
 \end{table}
 
-\section*{Citations and References}
-Works should be cited in-line. All works cited in-line should be compiled into a
-references list at the end of the paper. APA format is preferred for both
-in-line citations and the reference list.
+\subsection*{2.3 Additional elements}
+There are additional elements you may want to include in your paper, such as in-line or block quotes, lists, and more. For other content types not covered here, you have reasonable flexibility in determining how it should be used in this format.
 
-\subsection*{In-line Citations}
-Other articles or sources to which you refer should be cited in-line with the
-authors' names and the year of publication. The citation should be placed close
-in the text to the actual claim, not merely at the end of the paragraph. For
-example: students in the OMSCS program are older and more likely to be employed
-than students in the on-campus program \citep{Joyner17}. In the event of
-multiple authors, list them. For example: research finds sentiment analysis of
-the text of OMSCS reviews corresponds to student-assigned ratings of the course
-\citep{Newman18}. You may also cite multiple studies together. For example:
-several studies have found students in the online version of an undergraduate
-CS1 class performed equally with students in a traditional version
-\citep{Joyner18a,Joyner18b,Joyner19}. If you would like to refer to an author in
-text, you may also do so by including the year (in parentheses) after the
-author's name in text. If a publication has more than 4 authors, you may list
-only the first author followed by `et al' . For example:
-Joyner~et~al.~(\citeyear{Joyner16}) claim that a round of peer review prior to
-grading may improve graders' efficiency and the quality of feedback given. This
-applies to parenthetical citations as well, e.g. \citep{Joyner16}.
-
-\subsection*{References}
-References should be placed at the end of the paper in a dedicated section.
-Reference lists should be numbered and organized alphabetically by first
-author's last name. If multiple papers have the same author(s) and year, you may
-append a letter to the end of the year to allow differentiated in-line text
-(e.g. Joyner 2018a and Joyner 2018b in the section above). If multiple papers
-have the same author(s), list them in chronological order starting with the
-older paper. APA citation and reference style is preferred, but MLA, Chicago,
-Harvard, and Vancouver styles are accepted. Only works that are cited in-line
-should be included in the references section. For more information on in-line
-citations and reference sections, we recommend looking at the
-\link{https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html}{Purdue
-Owl}. Note that references are not counted against the length requirements in
-any of the listed classes. If the length limit for a particular assignment is 4
-pages, then the main text must stop by the end of the fourth page, but the
-reference list may extend into and past the 5th page.
-
-
-\section*{Additional Components}
-There are additional components you may need to include in your paper: in-line
-quotes, block quotes, bulleted lists, numbered lists, and more.
-
-\subsection*{In-Line and Block Quotes}
-If you would like to quote an outside source, you may do so with quotation marks
-followed by an in-line citation. If the quote is fewer than three lines, you may
-quote it in line. It is acceptable to replace pronouns with their target for
-clarity. For example, ``Heavy use of peer grading would compromise [the
-school's] reputation'' (Joyner 2016). If a quote is more than three lines, you
-should offset it as its own paragraph with half-inch larger margins on each
-side. For example:
+\subsubsection*{2.3.1 Quotes}
+If you would like to quote an outside source, you may do so with quotation marks followed by a citation. If a quote is fewer than three lines, you may write it in-line. It is acceptable to replace pronouns with their target in brackets for clarity. For example, “Heavy use of peer grading would compromise [the school’s] reputation” (Joyner, 2016). If a quote exceeds three lines, you should set it as its own paragraph with 0.5'' side margins, using the Blockquote style.
 
 \begin{quoting}
 Whether or not the grades generated by peers are reliably similar to grades
@@ -220,11 +122,9 @@ problem may be addressed by reintroducing some expert grading where possible''
 (Joyner 2016)
 \end{quoting}
 
-\subsection*{Bulleted and Numbered Lists}
-Bulleted and numbered lists have their text indented a half-inch from the left
-margin, with the bullet or number within that space (the standard format for
-bullets and margins in Word and Google Docs). For example:
-%
+\subsubsection*{2.3.2 Lists}
+Bulleted and numbered lists are indented 0.5'' from the left margin, with the bullet or number hanging in the margin by 0.25'' (the default format).
+
 \begin{itemize}
 \item
   Here's an item.
@@ -246,11 +146,31 @@ Bulleted lists follow the same format:
   indented at the same level of the previous lines.
 \end{enumerate}
 
-\subsection*{Other Content}
-For other content not covered here, you have reasonable flexibility in
-determining how it should be used in this format. Generally, nothing should lay
-outside the margins. You may specify new types of captions if you would like,
-such as Equations, Diagrams, or other kinds of content.
+
+\section*{3 Procedural elements}
+
+\subsection*{3.1 In-line Citations}
+Other articles or sources to which you refer should be cited in-line with the
+authors' names and the year of publication.\footnote{In-line citations are preferred over footnotes, and we favor APA citation format for both in-line citations and reference lists. Refer to the \link{https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/in_text_citations_the_basics.html}{Purdue Online Writing Lab}, or follow the above examples. Footnotes should use 8.5 point text with 1.26 line spacing.
+} The citation should be placed close
+in the text to the actual claim, not merely at the end of the paragraph. For
+example: students in the OMSCS program are older and more likely to be employed
+than students in the on-campus program \citep{Joyner17}. In the event of
+multiple authors, list them. For example: research finds sentiment analysis of
+the text of OMSCS reviews corresponds to student-assigned ratings of the course
+\citep{Newman18}. You may also cite multiple studies together. For example:
+several studies have found students in the online version of an undergraduate
+CS1 class performed equally with students in a traditional version
+\citep{Joyner18a,Joyner18b,Joyner19}. If you would like to refer to an author in
+text, you may also do so by including the year (in parentheses) after the
+author's name in text. If a publication has more than 4 authors, you may list
+only the first author followed by `et al' . For example:
+Joyner~et~al.~(\citeyear{Joyner16}) claim that a round of peer review prior to
+grading may improve graders' efficiency and the quality of feedback given. This
+applies to parenthetical citations as well, e.g. \citep{Joyner16}.
+
+\subsection*{3.2 Reference lists}
+References should be placed at the end of the paper in a dedicated section. Reference lists should be numbered and organized alphabetically by first author’s last name. If multiple papers have the same author(s) and year, you may append a letter to the end of the year to allow differentiated in-line text (e.g. Joyner, 2018a and Joyner, 2018b in the section above). If multiple papers have the same author(s), list them in chronological order starting with the older paper. Only works that are cited in-line should be included in the reference list. The reference list does not count against the length requirements.
 
 
 \bibliographystyle{apacite}
@@ -260,18 +180,8 @@ such as Equations, Diagrams, or other kinds of content.
 
 \clearpage
 \section*{Appendices}
-Appendices may be included after the reference list. If you have multiple
-appendices, you should label the appendix section in general as a level-1
-section called Appendices, and each Appendix with a level-2 header with a label
-and title, e.g. ``Appendix A: Interview Transcripts''. If you have only one
-appendix, you may simply label it as something like ``Appendix: Interview
-Transcript''.
+You may optionally move certain information to appendices at the end of your paper, after the reference list. If you have multiple appendices, you should create a section with a Heading 1 of “Appendices.” Each appendix should begin with a descriptive Heading 2; appendices can thus be referenced in the body text using their heading number and description, e.g. “Appendix 5.1: Survey responses.” If you have only one appendix, you can label it with the word “Appendix” followed by a descriptive title, e.g., “Appendix: Survey responses.”
 
-Appendices do not count against the page limit, but appendices should also not
-contain any information required to answer the question. The body text should be
-sufficient to answer the question, and the appendices should be included only
-for you to reference or to give context. Some assignments may also require you
-to include certain things in the appendices: these will not count against the
-page limit either.
+These appendices do not count against the page limit, but they should not contain any information required to answer the question in full. The body text should be sufficient to answer the question, and the appendices should be included only for you to reference or to give additional context. If you decide to move content to an appendix, be sure to summarize the content and note it in relevant place in the body text, e.g., “The raw data can be viewed in Appendix 5.1: Survey responses.”
 
 \end{document}
