@@ -6,8 +6,12 @@
 % Typesetting mathematics
 \usepackage{eulervm}
 
+% Justify text body
+\usepackage[none]{hyphenat}
+\sloppy
+
 % Crimson Text and fancy text stuff (like pasting unicode into your .tex file)
-\usepackage{crimson}
+% \usepackage{crimson}
 \usepackage[T1]{fontenc}
 % \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
@@ -103,10 +107,10 @@
 %   {\normalfont\fontsize{11}{0}\itshape}
 %   {\theparagraph}{1em}{}
 
-\titlespacing*{\section}{0pt}{11pt}{8.5pt}
-\titlespacing*{\subsection}{0pt}{8.5pt}{8.5pt}
-\titlespacing*{\subsubsection}{0pt}{8.5pt}{8.5pt}
-\titlespacing*{\paragraph}{0pt}{8.5pt}{8.5pt}
+\titlespacing*{\section}{0pt}{7pt}{0pt}
+\titlespacing*{\subsection}{0pt}{4.5pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{4.5pt}{0pt}
+\titlespacing*{\paragraph}{0pt}{4.5pt}{0pt}
 
 % (Not specified in JDF)
 % \titlespacing*{\subparagraph}{0pt}{8.5pt}{8.5pt}
@@ -129,6 +133,7 @@
    {\fontsize{17pt}{20}\selectfont \@title}
    \vspace{10pt}
    {\fontsize{11pt}{0}\selectfont \@author}
+   \vspace{-11pt}
    \end{center}
 }
 \makeatother
