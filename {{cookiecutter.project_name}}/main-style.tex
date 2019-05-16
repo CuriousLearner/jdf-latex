@@ -53,7 +53,7 @@
 
 % Make footnotesize the default tabular font
 \let\oldtabular\tabular
-\let\endoldtabular\tabular
+\let\endoldtabular\endtabular
 \renewenvironment{tabular}{\footnotesize\oldtabular}{\endoldtabular}
 
 \usepackage{float}      % better figures
@@ -156,6 +156,9 @@
 % Set a 0.5in margin for lists.
 \setlist{leftmargin=0.5in}
 \setlist{nolistsep}
+
+% Increase interword spacing to match with JDF 2.0.
+\spaceskip=1.5\fontdimen2\font plus 1.5\fontdimen3\font minus 1.5\fontdimen4\font
 
 % Custom commands: superscript, subscript, and URL.
 \newcommand{\super}[1]{$^{\text{#1}}$}
