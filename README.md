@@ -1,6 +1,6 @@
 # Cookiecutter for JDF LaTex
 
-A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF).
+A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF) 2.0!
 
 Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample/sample.pdf).
 

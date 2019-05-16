@@ -40,9 +40,21 @@
   tableposition=top,
   figureposition=bottom,
   font=footnotesize,
-  labelfont=bf
+  labelfont=bf,
+  labelsep=period,
 ]{caption}
 \captionsetup{justification=centering}
+
+% Control space around table and figure captions
+\captionsetup[figure]{aboveskip=6pt}
+\captionsetup[figure]{belowskip=-18pt}
+\captionsetup[table]{aboveskip=9pt}
+\captionsetup[table]{belowskip=0pt}
+
+% Make footnotesize the default tabular font
+\let\oldtabular\tabular
+\let\endoldtabular\tabular
+\renewenvironment{tabular}{\footnotesize\oldtabular}{\endoldtabular}
 
 \usepackage{float}      % better figures
 \usepackage{enumitem}   % better lists
@@ -102,7 +114,7 @@
   {\normalfont\fontsize{11}{0}\bfseries\itshape}
   {\theparagraph}{1em}{}
 
-% Level 5 (Not specified in JDF)
+% Level 5 (Not specified in JDF 2.0)
 % \titleformat{\subparagraph}
 %   {\normalfont\fontsize{11}{0}\itshape}
 %   {\theparagraph}{1em}{}
@@ -112,7 +124,7 @@
 \titlespacing*{\subsubsection}{0pt}{4.5pt}{0pt}
 \titlespacing*{\paragraph}{0pt}{4.5pt}{0pt}
 
-% (Not specified in JDF)
+% (Not specified in JDF 2.0)
 % \titlespacing*{\subparagraph}{0pt}{8.5pt}{8.5pt}
 % \titlespacing*{\subsubparagraph}{0pt}{8.5pt}{8.5pt}
 
