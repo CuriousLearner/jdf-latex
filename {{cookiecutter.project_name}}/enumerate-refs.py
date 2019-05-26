@@ -10,9 +10,9 @@ def apply_numbers_to_ref_list():
         read_lines = file.readlines()
         write_lines = read_lines[:]
         for i in range(len(read_lines) - 1):
-            if "begin{APACrefauthors}" in read_lines[i]:
-                write_lines[i + 1] = (
-                    '\hspace*{7.3mm}' + str(count) + '.\hspace*{2.4mm}' + write_lines[i + 1]
+            if "\APACrefbtitle" in read_lines[i]:
+                write_lines[i] = (
+                    '\hspace*{7.3mm}' + str(count) + '.\hspace*{2.4mm}' + write_lines[i]
                 )
                 count = count + 1
         file.seek(0)
@@ -21,3 +21,4 @@ def apply_numbers_to_ref_list():
 
 if __name__ == '__main__':
     apply_numbers_to_ref_list()
+
