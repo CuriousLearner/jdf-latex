@@ -53,13 +53,21 @@ DeclareCaptionFont{8.5pt}{
 % Control space around table and figure captions
 \captionsetup[figure]{aboveskip=8pt}
 \captionsetup[figure]{belowskip=-17pt}
-\captionsetup[table]{aboveskip=9pt}
+\captionsetup[table]{aboveskip=13pt}
 \captionsetup[table]{belowskip=0pt}
 
-% Make footnotesize the default tabular font
+% Customize tabular environment as per JDF 2.0
 \let\oldtabular\tabular
 \let\endoldtabular\endtabular
-\renewenvironment{tabular}{\footnotesize\oldtabular}{\endoldtabular}
+\renewenvironment{tabular}{
+    \fontsize{8.5}{8.5}\selectfont
+    \spaceskip=1.0\fontdimen2\font plus 1.0\fontdimen3\font minus 1.0\fontdimen4\font
+    \oldtabular}{\endoldtabular}
+
+% Custom space above and below \midrule horizontal line
+\usepackage{booktabs}
+\aboverulesep=0.5em
+\belowrulesep=0.3em
 
 \usepackage{float}      % better figures
 \usepackage{enumitem}   % better lists
