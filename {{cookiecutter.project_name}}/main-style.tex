@@ -40,15 +40,19 @@
 \usepackage[
   tableposition=top,
   figureposition=bottom,
-  font=footnotesize,
   labelfont=bf,
   labelsep=period,
+  justification=centering,
 ]{caption}
-\captionsetup{justification=centering}
+DeclareCaptionFont{8.5pt}{
+    \fontsize{8.5pt}{14pt}\selectfont
+    \spaceskip=1.0\fontdimen2\font plus 1.0\fontdimen3\font minus 1.0\fontdimen4\font
+}
+\captionsetup{font=8.5pt}
 
 % Control space around table and figure captions
-\captionsetup[figure]{aboveskip=6pt}
-\captionsetup[figure]{belowskip=-18pt}
+\captionsetup[figure]{aboveskip=8pt}
+\captionsetup[figure]{belowskip=-17pt}
 \captionsetup[table]{aboveskip=9pt}
 \captionsetup[table]{belowskip=0pt}
 
