@@ -54,7 +54,7 @@
 \captionsetup[figure]{aboveskip=8pt}
 \captionsetup[figure]{belowskip=-17pt}
 \captionsetup[table]{aboveskip=13pt}
-\captionsetup[table]{belowskip=0pt}
+\captionsetup[table]{belowskip=-1pt}
 
 % Customize tabular environment as per JDF 2.0
 \let\oldtabular\tabular
@@ -103,7 +103,7 @@
 \setlength{\absrightindent}{0.5in}
 \setlength{\abstitleskip}{-\absparindent}
 \renewcommand{\abstracttextfont}{\normalfont}
-\abslabeldelim{ \textemdash}
+\abslabeldelim{\:\textemdash}
 \renewcommand{\abstractnamefont}{\normalfont\bfseries\itshape}
 
 % Paragraph indentation
@@ -128,7 +128,7 @@
 % Level 4 (The use of headings beyond Heading 3 is discouraged.)
 \titleformat{\paragraph}[runin]
   {\normalfont\fontsize{11}{0}\bfseries\itshape}
-  {\theparagraph}{2pt}{}
+  {\theparagraph}{2pt}{}[\,\textemdash\,]
 
 % Level 5 (Not specified in JDF 2.0)
 % \titleformat{\subparagraph}
