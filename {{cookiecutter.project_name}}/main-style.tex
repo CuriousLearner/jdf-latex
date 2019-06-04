@@ -83,6 +83,9 @@
 \usepackage{natbib}
 \setlength\bibhang{0.5in}
 
+% Get the References section to be numbered as if it were created via \section
+\usepackage[numbib]{tocbibind}
+
 {% raw %}
 % Remove the comma between authors and years.
 \AtBeginDocument{%
@@ -109,23 +112,23 @@
 
 % Level 1
 \titleformat{\section}
-  {\normalfont\fontsize{11}{0}\bfseries\MakeUppercase}
-  {\thesection}{1em}{}
+  {\normalfont\fontsize{11}{0}\bfseries}
+  {\thesection}{2pt}{\MakeUppercase}
 
 % Level 2
 \titleformat{\subsection}
   {\normalfont\fontsize{11}{0}\bfseries}
-  {\thesection}{1em}{}
+  {\thesubsection}{2pt}{}
 
 % Level 3
 \titleformat{\subsubsection}
   {\normalfont\fontsize{11}{0}\bfseries\itshape}
-  {\thesection}{1em}{}
+  {\textup{\thesubsubsection}}{2pt}{}
 
 % Level 4 (The use of headings beyond Heading 3 is discouraged.)
 \titleformat{\paragraph}[runin]
   {\normalfont\fontsize{11}{0}\bfseries\itshape}
-  {\theparagraph}{1em}{}
+  {\theparagraph}{2pt}{}
 
 % Level 5 (Not specified in JDF 2.0)
 % \titleformat{\subparagraph}
