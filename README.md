@@ -41,6 +41,7 @@ And your `main.pdf` shall be good to go!
 
 __NOTE__:
 - Every time you make changes in `main.tex` file you need to re-generate the PDF with `make` command.
+- If there is _no text_ present between 2 successive headings, then add the custom command `\notext` between them to match their linespacing with JDF2.0.
 
 ## Thanks to Contributors
 
