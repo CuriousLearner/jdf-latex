@@ -1,6 +1,6 @@
 # Cookiecutter for JDF LaTex
 
-A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF).
+A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF) 2.0!
 
 Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{{cookiecutter.project_name}}/sample/sample.pdf).
 
@@ -41,6 +41,7 @@ And your `main.pdf` shall be good to go!
 
 __NOTE__:
 - Every time you make changes in `main.tex` file you need to re-generate the PDF with `make` command.
+- If there is _no text_ present between 2 successive headings, then add the custom command `\notext` between them to match their linespacing with JDF2.0.
 
 ## Thanks to Contributors
 

@@ -1,14 +1,25 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
+
+% Palatino typeface for all text
+\usepackage{tgpagella}
+
+% Typesetting mathematics
+\usepackage{eulervm}
+
+% Remove hyphenation
+\usepackage[none]{hyphenat}
+% Maintain justification after removing hyphenation
+\sloppy
 
 % Crimson Text and fancy text stuff (like pasting unicode into your .tex file)
-\usepackage{crimson}
+% \usepackage{crimson}
 \usepackage[T1]{fontenc}
 % \usepackage{fontspec}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
 % Customize page, text, section headings, and quotes
-\usepackage[margin=1.5in]{geometry}
+\usepackage[top=1in, bottom=1.5in, left=1.5in, right=1.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage[begintext=``,vskip=\partopsep,leftmargin=0.5in,rightmargin=0.5in]{quoting}
@@ -29,10 +40,34 @@
 \usepackage[
   tableposition=top,
   figureposition=bottom,
-  font=footnotesize,
-  labelfont=bf
+  labelfont=bf,
+  labelsep=period,
+  justification=centering,
 ]{caption}
-\captionsetup{justification=centering}
+\DeclareCaptionFont{8.5pt}{
+    \fontsize{8.5pt}{14pt}\selectfont
+    \spaceskip=1.0\fontdimen2\font plus 1.0\fontdimen3\font minus 1.0\fontdimen4\font
+}
+\captionsetup{font=8.5pt}
+
+% Control space around table and figure captions
+\captionsetup[figure]{aboveskip=8pt}
+\captionsetup[figure]{belowskip=-17pt}
+\captionsetup[table]{aboveskip=13pt}
+\captionsetup[table]{belowskip=-1pt}
+
+% Customize tabular environment as per JDF 2.0
+\let\oldtabular\tabular
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}{
+    \fontsize{8.5}{8.5}\selectfont
+    \spaceskip=1.0\fontdimen2\font plus 1.0\fontdimen3\font minus 1.0\fontdimen4\font
+    \oldtabular}{\endoldtabular}
+
+% Custom space above and below \midrule horizontal line
+\usepackage{booktabs}
+\aboverulesep=0.5em
+\belowrulesep=0.3em
 
 \usepackage{float}      % better figures
 \usepackage{enumitem}   % better lists
@@ -48,6 +83,9 @@
 \usepackage{natbib}
 \setlength\bibhang{0.5in}
 
+% Get the References section to be numbered as if it were created via \section
+\usepackage[numbib]{tocbibind}
+
 {% raw %}
 % Remove the comma between authors and years.
 \AtBeginDocument{%
@@ -57,7 +95,7 @@
 }
 
 % Main body spacing
-\setstretch{1.15}
+\setstretch{1.26}
 
 % Abstract margins and style
 \setlength{\absparindent}{0em}
@@ -65,48 +103,52 @@
 \setlength{\absrightindent}{0.5in}
 \setlength{\abstitleskip}{-\absparindent}
 \renewcommand{\abstracttextfont}{\normalfont}
-\abslabeldelim{.}
+\abslabeldelim{\:\textemdash}
+\renewcommand{\abstractnamefont}{\normalfont\bfseries\itshape}
 
 % Paragraph indentation
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt}
+\setlength{\parskip}{8.5pt}
 
 % Level 1
 \titleformat{\section}
-  {\normalfont\fontsize{18}{0}\bfseries}
-  {\thesection}{1em}{}
+  {\normalfont\fontsize{11}{0}\bfseries}
+  {\thesection}{2pt}{\MakeUppercase}
 
 % Level 2
 \titleformat{\subsection}
-  {\normalfont\fontsize{14}{0}\bfseries}
-  {\thesection}{1em}{}
+  {\normalfont\fontsize{11}{0}\bfseries}
+  {\thesubsection}{2pt}{}
 
 % Level 3
 \titleformat{\subsubsection}
-  {\normalfont\fontsize{12}{0}\bfseries}
-  {\thesection}{1em}{}
+  {\normalfont\fontsize{11}{0}\bfseries\itshape}
+  {\textup{\thesubsubsection}}{2pt}{}
 
-% Level 4
-\titleformat{\paragraph}
-  {\normalfont\fontsize{12}{0}\bfseries\itshape}
-  {\theparagraph}{1em}{}
+% Level 4 (The use of headings beyond Heading 3 is discouraged.)
+\titleformat{\paragraph}[runin]
+  {\normalfont\fontsize{11}{0}\bfseries\itshape}
+  {\theparagraph}{2pt}{}[\,\textemdash\,]
 
-% Level 5
-\titleformat{\subparagraph}
-  {\normalfont\fontsize{12}{0}\itshape}
-  {\theparagraph}{1em}{}
+% Level 5 (Not specified in JDF 2.0)
+% \titleformat{\subparagraph}
+%   {\normalfont\fontsize{11}{0}\itshape}
+%   {\theparagraph}{1em}{}
 
-\titlespacing*{\section}{0pt}{12pt}{6pt}
-\titlespacing*{\subsection}{0pt}{12pt}{6pt}
-\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
-\titlespacing*{\paragraph}{0pt}{12pt}{6pt}
-\titlespacing*{\subparagraph}{0pt}{12pt}{6pt}
-\titlespacing*{\subsubparagraph}{0pt}{12pt}{6pt}
+\titlespacing*{\section}{0pt}{7pt}{0pt}
+\titlespacing*{\subsection}{0pt}{4.5pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{4.5pt}{0pt}
+\titlespacing*{\paragraph}{0pt}{4.5pt}{0pt}
 
-% Just have the page number in the top-right as tightly as possible.
+% (Not specified in JDF 2.0)
+% \titlespacing*{\subparagraph}{0pt}{8.5pt}{8.5pt}
+% \titlespacing*{\subsubparagraph}{0pt}{8.5pt}{8.5pt}
+
+% Just have the page number centered in footer.
 \renewcommand{\headrulewidth}{0pt}
+\setlength{\footskip}{0.5in}
 \fancyhf{}
-\rhead{\thepage}
+\cfoot{\thepage}
 \pagestyle{fancy}
 
 % Overwrite the title format, specifying font sizes and tightening space between
@@ -116,9 +158,10 @@
 \makeatletter
 \renewcommand{\maketitle}{\bgroup
    \begin{center}
-   \textbf{{\fontsize{18pt}{20}\selectfont \@title}}
+   {\fontsize{17pt}{20}\selectfont \@title}
    \vspace{10pt}
-   {\fontsize{12pt}{0}\selectfont \@author}
+   {\fontsize{11pt}{0}\selectfont \@author}
+   \vspace{-11pt}
    \end{center}
 }
 \makeatother
@@ -128,12 +171,15 @@
 
 % Set a 0.5in margin for lists.
 \setlist{leftmargin=0.5in}
-\setlength\itemsep{0pt}
+\setlist{nolistsep}
+
+% Increase interword spacing to match with JDF 2.0.
+\spaceskip=1.5\fontdimen2\font plus 1.5\fontdimen3\font minus 1.5\fontdimen4\font
 
 % Custom commands: superscript, subscript, and URL.
 \newcommand{\super}[1]{$^{\text{#1}}$}
 \newcommand{\subsc}[1]{$_{\text{#1}}$}
-\newcommand{\link}[2]{\href{#1}{\underline{#2}}}
+\newcommand{\link}[2]{\href{#1}{\underline{\smash{#2}}}}
 
 % Custom \authoremail command that adds a clickable email
 \newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
@@ -143,6 +189,10 @@
 \usepackage{xcolor}
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+% Custom command for adjusting linespacing between 2 successive headings having
+% no text between them
+\newcommand{\notext}{\vspace{8.5pt}}
 
 % Sets up some nice PDF metadata
 \hypersetup{
