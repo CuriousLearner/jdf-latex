@@ -4,6 +4,8 @@ if echo "{{ cookiecutter.initial_git_commit }}" | grep -iq '^y'; then
     echo -e "\e[1;33m==> Intializing a new git repository \e[0m"
     echo -e "\e[1;32m==> git init \e[0m"
     git init
+    echo -e "\e[1;33m==> Adding basic .gitignore for a TeX project \e[0m"
+    echo -e "#Latex\n*.aux\n*.glo\n*.idx\n*.log\n*.toc\n*.ist\n*.acn\n*.acr\n*.alg\n*.bbl\n*.blg\n*.dvi\n*.glg\n*.gls\n*.ilg\n*.ind\n*.lof\n*.lot\n*.maf\n*.mtc\n*.mtc1\n*.out\n*.synctex.gz" >> .gitignore
     echo -e "\e[1;32m==> git status \e[0m"
     git status
     echo -e "\e[1;33m==> Staging all project files \e[0m"
