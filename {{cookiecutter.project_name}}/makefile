@@ -1,6 +1,6 @@
 .PHONY: all
 all:
-	$(info Generating the JDF PDF.)
+	$(info ==> Generating the PDF in JDF-2.0.)
 	pdflatex main
 	bibtex main
 	python enumerate-refs.py

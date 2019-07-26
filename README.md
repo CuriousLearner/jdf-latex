@@ -1,4 +1,4 @@
-# Cookiecutter for JDF LaTex
+# Cookiecutter for JDF LaTeX
 
 A cookiecutter template for writing LaTeX articles in Joyner Document Format (JDF) 2.0!
 
@@ -6,9 +6,9 @@ Here is a [sample PDF](https://github.com/curiouslearner/jdf-latex/blob/master/{
 
 ## Basic Workflow
 
-### Get LaTex
+### Get LaTeX
 
-Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then you might already have `texlive` installed, but it is suggested to get the current [Tex Live Distribution](https://www.tug.org/texlive/).
+Install [LaTeX](https://www.latex-project.org/get/). If you are on Linux, then you might already have `texlive` installed, but it is suggested to get the current [Tex Live Distribution](https://www.tug.org/texlive/).
 
 ### Get the template
 
@@ -31,7 +31,7 @@ Install [LaTex](https://www.latex-project.org/get/). If you are on Linux, then y
 
 ### Build the PDF
 
-After writing your LaTex document, give `make` command from the project directory.
+After writing your LaTeX document, give `make` command from the project directory.
 
 ```shell
     make
