@@ -1,42 +1,28 @@
 #!/bin/bash
 
-if echo "{{ cookiecutter.initial_git_commit }}" | grep -iq '^y'; then
-    echo -e "\e[1;33m==> Intializing a new git repository \e[0m"
-    echo -e "\e[1;32m==> git init \e[0m"
-    git init
-    echo -e "\e[1;33m==> Adding basic .gitignore for a TeX project \e[0m"
-    echo -e "#Latex\n*.aux\n*.glo\n*.idx\n*.log\n*.toc\n*.ist\n*.acn\n*.acr\n*.alg\n*.bbl\n*.blg\n*.dvi\n*.glg\n*.gls\n*.ilg\n*.ind\n*.lof\n*.lot\n*.maf\n*.mtc\n*.mtc1\n*.out\n*.synctex.gz" >> .gitignore
-    echo -e "\e[1;32m==> git status \e[0m"
-    git status
-    echo -e "\e[1;33m==> Staging all project files \e[0m"
-    echo -e "\e[1;32m==> git add -A \e[0m"
-    git add -A
-    echo -e "\e[1;32m==> git status \e[0m"
-    git status
-    echo -e "\e[1;33m==> Making the initial commit \e[0m"
-    echo -e "\e[1;32m==> git commit \e[0m"
-    git commit -m "Create base project"
-    echo -e "\e[1;32m==> git log \e[0m"
-    git log
-    echo -e "\e[1;32m==> git status \e[0m"
-    git status
-    if [ $(echo "{{ cookiecutter.enter_git_origin }}" | grep -i '[a-z]' | wc -c) -gt 4 ]; then
-        echo -e "\e[1;33m==> Setting up {{ cookiecutter.enter_git_origin }} as origin \e[0m"
-        echo -e "\e[1;32m==> git remote add origin {{ cookiecutter.enter_git_origin }} \e[0m"
-        git remote add origin {{ cookiecutter.enter_git_origin }}
-        echo -e "\e[1;32m==> git remote -v \e[0m"
-        git remote -v
-        if echo "{{ cookiecutter.push_initial_commit }}" | grep -iq '^y'; then
-            echo -e "\e[1;33m==> Pushing intial commit to origin: {{ cookiecutter.enter_git_origin }} \e[0m"
-            echo -e "\e[1;32m==> git push origin master \e[0m"
-            git push origin master
-            if [ $(echo $?) -ne 0 ]; then
-                echo -e "\e[1;31m==> Removing invalid origin: {{ cookiecutter.enter_git_origin }} \e[0m"
-                echo -e "\e[0;31m==> git remote remove origin \e[0m"
-                git remote remove origin
+echo -n "===> Would you like to initialize this project as a git repository? [Y/n] ";
+read -r git_init;
+if echo "$git_init" | grep -iq "^y"; then
+    git init;
+    echo -n "===> Would you like to create the initial git commit? [Y/n] ";
+    read -r git_commit;
+    if echo "$git_commit" | grep -iq "^y"; then
+        echo -e "#Latex\\n*.aux\\n*.glo\\n*.idx\\n*.log\\n*.toc\\n*.ist\\n*.acn\\n*.acr\\n*.alg\\n*.bbl\\n*.blg\\n*.dvi\\n*.glg\\n*.gls\\n*.ilg\\n*.ind\\n*.lof\\n*.lot\\n*.maf\\n*.mtc\\n*.mtc1\\n*.out\\n*.synctex.gz" >> .gitignore;
+        git add -A;
+        git commit -m "Create base LaTeX project";
+        echo -n "===> Would you like to add a remote as origin? [Y/n] ";
+        read -r git_remote;
+        if echo "$git_remote" | grep -iq "^y"; then
+            echo -n "===> Please enter the remote address: ";
+            read -r remote_address;
+            git remote add origin "$remote_address";
+            echo -n "===> Would you like to push inital commit at origin? [Y/n] ";
+            read -r git_push;
+            if echo "$git_push" | grep -iq "^y"; then
+                if ! git push origin master ; then
+                    echo "===> Error: Couldn't push to origin. Remote address ($remote_address) seems invalid."
+                fi
             fi
-            echo -e "\e[1;32m==> git status \e[0m"
-            git status
         fi
     fi
 fi

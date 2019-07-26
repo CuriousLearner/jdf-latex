@@ -1,13 +1,10 @@
 {
-    "author_name": "author name",
+    "author_name": "author",
     "author_email": "author@domain.com",
-    "project_name": "new_project",
+    "project_name": "myproject",
     "project_title_line_1": "a new project",
     "project_title_line_2": "",
     "project_title_line_3": "",
-    "initial_git_commit": "y",
-    "enter_git_origin": "",
-    "push_initial_commit": "y",
     "_copy_without_render": [
         "references.bib"
     ]
