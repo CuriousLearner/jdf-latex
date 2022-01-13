@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Script to modify the default main.bbl file to generate
 # intended and enumerated reference list.
 
