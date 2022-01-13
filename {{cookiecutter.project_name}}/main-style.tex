@@ -40,8 +40,8 @@
 \usepackage[
   tableposition=top,
   figureposition=bottom,
-  labelfont=bf,
-  labelsep=period,
+  labelfont={bf,it},
+  labelsep=endash,
   justification=centering,
 ]{caption}
 \DeclareCaptionFont{8.5pt}{
@@ -49,6 +49,7 @@
     \spaceskip=1.0\fontdimen2\font plus 1.0\fontdimen3\font minus 1.0\fontdimen4\font
 }
 \captionsetup{font=8.5pt}
+\captionsetup{margin=1in}
 
 % Control space around table and figure captions
 \captionsetup[figure]{aboveskip=8pt}
@@ -180,7 +181,8 @@
 \newcommand{\link}[2]{\href{#1}{\underline{\smash{#2}}}}
 
 % Custom \authoremail command that adds a clickable email
-\newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
+% \newcommand{\authoremail}[2]{\author{#1\\\link{mailto:#2}{#2}}}
+\newcommand{\authoremail}[2]{\author{#1\\{#2}}}
 
 % Custom command for inline code-style
 \usepackage{courier}
